@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+    color: #232e35;
+}
+
+p{
+    font-size: 16px;
+    line-height: 30px;
+}
+
+p, span, label, input, textarea, li{
+    color: #656D72;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+    width: 90%;
+    }
+}
+
+/* Butoon */
+.btn{
+    padding: 16px 20px;
+    background: white;
+    border: 1.5px solid #f1f1f1;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Titles */
+.section-title{
+    margin: 16px 0 64px;
+    font-size: 32px;
+}
+
+.pre-title{
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: #656D72;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #d9d9d9;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Layout */
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 48px;
+}
+
+/* Logo and Navigation Menu */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 48px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.logo a {
+    color: #232e35;
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: #232e35;
+}
+
+/* burger */
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger{
+    display:none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Hero Section */
+#hero{
+    height: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name{
+    font-size: 48px;
+    font-weight: 700;
+    margin: .5rem 0 1rem;
+}
+
+.hero-name span{
+    color: rgb(36, 209, 209);
+}
+
+.hero-right img{
+    width: 90%;
+}
+
+.hero-right{
+    display: flex;
+    justify-content: center;
+}
+
+/* Service Section */
+#services{
+    background-color: #fbfbfb;
+    padding: 96px 0;
+}
+
+.services .pre-title{
+    margin: 0 auto;
+}
+
+.services-title{
+    text-align: center;
+}
+
+.service{
+    padding: 48px 32px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.service h4{
+    margin: 24px 0;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.service-icon{
+    background: rgb(212, 248, 248);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 16px 21px;
+    border-radius: 8px;
+}
+
+.service-icon svg{
+    fill: rgb(6, 31, 31);;
+}
+
+/* Portofolio Section */
+#portfolios{
+    padding: 96px 0;
+}
+
+.portfolio{
+    border-radius: 11px;
+    overflow: hidden;
+    border: 0.4px solid #e7e8e9;
+}
+
+.portfolio-cover{
+    height: 250px;
+}
+
+.portfolio-cover img{
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-info{
+    padding: 32px 24px;
+}
+
+.portfolio-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.portfolio h4{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.portfolio-title a svg:hover{
+    fill: rgb(36, 209, 209);
+}
+
+.portfolio-title a svg{
+    transition: .2s ease-in-out;
+}
+
+.portfolio-text{
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.portfolio-text div{
+    font-size: 14.4px;
+    border: 1px solid #f1f1f1;
+    padding: 7px 16px;
+    color: #656D72;
+}
+
+/* skills & education */
+#skills{
+    padding: 96px 0;
+    background: #fbfbfb;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 48px;
+}
+
+.education{
+    display: flex;
+    gap: 32px;
+}
+
+.education .line{
+    padding: 0 11px;
+}
+
+.education .line div{
+    width: 2px;
+    height: 100%;
+    background: #f1f1f1;
+    position: relative;
+}
+
+.education-info p{
+    margin: 10px 0;
+    color: #414040;
+}
+
+.education-years{
+    margin-bottom: 48px;
+}
+
+/* The dot on the line */
+.education .line div::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skill-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 24px;
+}
+
+.skills-right ul{
+    line-height: 32px;
+    padding: 0 16px;
+}
+
+/* Contact Section */
+#contact{
+    padding: 96px 0;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 48px;
+}
+
+.contact-form div{
+    margin-bottom: 22px;
+}
+
+.contact-form input, .main-container textarea{
+    width: 100%;
+    padding: 12px 21px;
+    font-family: "Roboto", sans-serif;
+    background-color: #fbfbfb;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 12px 21px;
+    background-color: rgb(80, 224, 224);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-submit:hover{
+    background: rgb(30, 124, 124);
+}
+
+.contact-item{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.contact-item-icon{
+    background-color: rgb(212, 248, 248);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg{
+    fill: rgb(6, 31, 31);
+}
+
+.contact-item-detail h4{
+    margin-bottom: 9px;
+}
+
+/* Footer Section */
+footer{
+    padding: 64px 0;
+    background: #fbfbfb;
+    text-align: center;
+}
+
+.footer-icons{
+    margin-bottom: 16px;
+}
+
+.footer-icons a{
+    margin: 0 8px;
+}
+
+.footer-icons svg{
+    fill: #3e3f40;
+}
+
+.footer-icons a:hover svg{
+    fill: #000;
+}
